@@ -1,18 +1,26 @@
-import type { Config } from "tailwindcss";
+import animatePlugin from "tailwindcss-animate";
+import radixPlugin from "tailwindcss-radix";
+import { extendedTheme } from "./src/utils/extended-theme.ts";
+import { borderRadius } from "./tokens/border-radius.ts";
+import { colors } from "./tokens/colors.ts";
+import { typography } from "./tokens/typography.ts";
+import { Config } from "tailwindcss";
 
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const tailwindConfig = {
+  darkMode: ["class"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    fontSize: typography.fontSize,
+    lineHeight: typography.lineHeight,
+    fontFamily: typography.fontFamily,
+    fontWeight: typography.fontWeight,
+    colors,
+    borderRadius,
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      ...extendedTheme,
     },
   },
-  plugins: [],
+  plugins: [animatePlugin, radixPlugin],
 } satisfies Config;
+
+export default tailwindConfig;
