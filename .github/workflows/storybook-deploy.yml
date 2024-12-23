@@ -1,0 +1,37 @@
+name: 🏗️ Build and Publish Storybook to GitHub Pages
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    name: 🚀 Build and Publish Storybook
+    runs-on: ubuntu-22.04
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🏗️ Build Storybook
+        run: npm run build:storybook
+
+      - name: Publish Storybook 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: storybook-static

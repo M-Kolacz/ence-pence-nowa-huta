@@ -1,9 +1,9 @@
 import animatePlugin from "tailwindcss-animate";
 import radixPlugin from "tailwindcss-radix";
 import { extendedTheme } from "./src/utils/extended-theme.ts";
-import { borderRadius } from "./tokens/border-radius.ts";
-import { colors } from "./tokens/colors.ts";
-import { typography } from "./tokens/typography.ts";
+import { borderRadius } from "./src/tokens/border-radius.ts";
+import { colors } from "./src/tokens/colors.ts";
+import { typography } from "./src/tokens/typography.ts";
 import { Config } from "tailwindcss";
 
 const tailwindConfig = {
