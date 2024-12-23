@@ -40,7 +40,7 @@ export function Icon({
   return (
     <svg {...props} className={cn("inline h-6 w-6 self-center", className)}>
       {title ? <title>{title || name}</title> : null}
-      <use href={`./sprite.svg#${name}`} />
+      <use href={`sprite.svg#${name}`} />
     </svg>
   );
 }
