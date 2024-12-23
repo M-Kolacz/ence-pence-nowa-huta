@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 229 84% 5%;
+    --card: 0 0% 100%;
+    --card-foreground: 229 84% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 229 84% 5%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --text: 229 84% 5%;
+    --text-subtle: 215 19% 35%;
+    --text-inactive: 215 16% 47%;
+    --text-foreground: 0 0% 100%;
+
+    --spacing-app: theme(spacing[6]);
+    --spacing-section: theme(spacing[16]);
+    --spacing-subtle: theme(spacing[3]);
+    --spacing-base: theme(spacing[4]);
+    --spacing-strong: theme(spacing[6]);
+
+    --text-h1: theme(fontSize[5xl]);
+    --text-h2: theme(fontSize[3xl]);
+    --text-h3: theme(fontSize[2xl]);
+    --text-p1: theme(fontSize[xl]);
+    --text-p2: theme(fontSize[lg]);
+    --text-p3: theme(fontSize[base]);
+    --text-p4: theme(fontSize[sm]);
+    --text-p5: theme(fontSize[xs]);
+    --text-b1: theme(fontSize[base]);
+    --text-b2: theme(fontSize[sm]);
+
+    --line-h1: theme(lineHeight[5xl]);
+    --line-h2: theme(lineHeight[3xl]);
+    --line-h3: theme(lineHeight[2xl]);
+    --line-p1: theme(lineHeight[xl]);
+    --line-p2: theme(lineHeight[lg]);
+    --line-p3: theme(lineHeight[base]);
+    --line-p4: theme(lineHeight[sm]);
+    --line-p5: theme(lineHeight[xs]);
+    --line-b1: theme(fontSize[base]);
+    --text-b2: theme(fontSize[sm]);
+
+    /* OLD */
+    --bg-subtle: theme(colors.neutral.white);
+    --bg-base: theme(colors.neutral[50]);
+    --bg-strong: theme(colors.neutral[100]);
+
+    --border-subtle: theme(colors.neutral[100]);
+    --border-base: theme(colors.neutral[200]);
+    --border-strong: theme(colors.neutral[300]);
+
+    --icon-subtle: theme(colors.neutral[400]);
+    --icon-base: theme(colors.neutral[600]);
+    --icon-strong: theme(colors.neutral[950]);
+  }
+
+  @media screen(md) {
+    :root {
+      --spacing-app: theme(spacing[8]);
+      --spacing-section: theme(spacing[24]);
+      --spacing-subtle: theme(spacing[4]);
+      --spacing-base: theme(spacing[6]);
+      --spacing-strong: theme(spacing[8]);
+
+      --text-h1: theme(fontSize[6xl]);
+      --text-h2: theme(fontSize[4xl]);
+      --text-h3: theme(fontSize[3xl]);
+      --line-h1: theme(lineHeight[6xl]);
+      --line-h2: theme(lineHeight[4xl]);
+      --line-h3: theme(lineHeight[3xl]);
+    }
+  }
+
+  @media screen(xl) {
+    :root {
+      --spacing-app: theme(spacing[16]);
+      --spacing-section: theme(spacing[32]);
+      --spacing-subtle: theme(spacing[6]);
+      --spacing-base: theme(spacing[9]);
+      --spacing-strong: theme(spacing[12]);
+
+      --text-h1: theme(fontSize[7xl]);
+      --text-h2: theme(fontSize[5xl]);
+      --text-h3: theme(fontSize[4xl]);
+      --line-h1: theme(lineHeight[7xl]);
+      --line-h2: theme(lineHeight[5xl]);
+      --line-h3: theme(lineHeight[4xl]);
+    }
+  }
+
+  [data-icon] {
+    width: 24px;
+    height: 24px;
+  }
+}

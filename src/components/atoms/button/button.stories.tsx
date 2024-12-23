@@ -85,7 +85,7 @@ export const Sizes: Story = {
             size={size}
             title={size === "icon" ? "Icon button" : undefined}
           >
-            {size === "icon" ? null : args.children}
+            {size === "icon" ? <Icon name="diaper" /> : args.children}
           </Button>
         ))}
       </div>
