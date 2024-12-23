@@ -1,9 +1,19 @@
+import React from "react";
 import { type Preview } from "@storybook/react";
 import "../src/styles/global.css";
+import { roboto, robotoCondensed } from "../src/styles/font.ts";
 
 import { STORYBOOK_VIEWPORTS } from "./modes";
 
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <div className={`${roboto.className} ${robotoCondensed.variable}`}>
+        <Story />
+      </div>
+    ),
+  ],
+
   parameters: {
     controls: {
       expanded: true,
