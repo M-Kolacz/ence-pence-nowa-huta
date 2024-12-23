@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button, Icon } from "#app/components/atoms";
 
 export default function Home() {
