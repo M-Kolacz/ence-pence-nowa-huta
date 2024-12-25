@@ -1,6 +1,6 @@
 import { Slot } from "@radix-ui/react-slot";
 import { type ComponentPropsWithRef, forwardRef } from "react";
-import { cn } from "#app/utils/misc.ts";
+import { cn } from "#app/utils/misc.tsx";
 import { variants, type ButtonVariants } from "./button-variants.ts";
 
 export type ButtonProps = {
