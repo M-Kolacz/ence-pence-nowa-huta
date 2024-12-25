@@ -1,3 +1,19 @@
+import {
+  Hero,
+  Activities,
+  OurApproach,
+  Testimonials,
+  IntroGallery,
+} from "#app/components/organisms";
+
 export const Homepage = () => {
-  return <div>Homepage</div>;
+  return (
+    <>
+      <Hero />
+      <Activities />
+      <OurApproach />
+      <Testimonials />
+      <IntroGallery />
+    </>
+  );
 };

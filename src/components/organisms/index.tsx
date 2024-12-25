@@ -1,11 +1,11 @@
 export { Header } from "./shared/header/header.tsx";
 export { Footer } from "./shared/footer/footer.tsx";
 
-// export { Hero } from "./homepage/hero/hero.tsx";
-// export { Activities } from "./homepage/activities/activities.tsx";
-// export { OurApproach } from "./homepage/our-approach/our-approach.tsx";
-// export { Testimonials } from "./homepage/testimonials/testimonials.tsx";
-// export { IntroGallery } from "./homepage/intro-gallery/intro-gallery.tsx";
+export { Hero } from "./homepage/hero/hero.tsx";
+export { Activities } from "./homepage/activities/activities.tsx";
+export { OurApproach } from "./homepage/our-approach/our-approach.tsx";
+export { Testimonials } from "./homepage/testimonials/testimonials.tsx";
+export { IntroGallery } from "./homepage/intro-gallery/intro-gallery.tsx";
 
 // export { Registration } from "./news/registration/registration.tsx";
 // export { Donation } from "./news/donation/donation.tsx";

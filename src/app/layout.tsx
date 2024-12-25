@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "#app/styles/global.css";
 import { roboto, robotoCondensed } from "#app/styles/font.ts";
-import { AppContainer } from "#app/components/templates";
+import { AppContainer, Main } from "#app/components/templates";
 import { Header, Footer } from "#app/components/organisms";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
       >
         <AppContainer>
           <Header />
-          {children}
+          <Main>{children}</Main>
           <Footer />
         </AppContainer>
       </body>
