@@ -24,11 +24,7 @@ export const OurApproach = () => {
           </p>
         </div>
       </div>
-      <Image
-        src={ourApproachSrc}
-        alt=""
-        className="max-h-[500px] max-w-[500px] md:order-first lg:h-[500px] lg:w-[500px]"
-      />
+      <Image src={ourApproachSrc} alt="" className=" md:order-first " />
     </Section>
   );
 };

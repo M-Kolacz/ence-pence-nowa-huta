@@ -34,7 +34,7 @@ export const Hero = () => {
           </Button>
         </div>
       </div>
-      <Image src={heroSrc} alt="" className="max-h-[500px] max-w-[500px]" />
+      <Image src={heroSrc} alt="" />
     </Section>
   );
 };
