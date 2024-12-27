@@ -2,6 +2,11 @@ import React from "react";
 import { type Preview } from "@storybook/react";
 import "../src/styles/global.css";
 import { roboto, robotoCondensed } from "../src/styles/font.ts";
+import "../src/styles/gallery.css";
+import "react-photo-album/columns.css";
+import "yet-another-react-lightbox/plugins/counter.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "yet-another-react-lightbox/styles.css";
 
 import { STORYBOOK_VIEWPORTS } from "./modes";
 
