@@ -10,10 +10,10 @@ export { IntroGallery } from "./homepage/intro-gallery/intro-gallery.tsx";
 export { Registration } from "./news/registration/registration.tsx";
 export { Donation } from "./news/donation/donation.tsx";
 
-// export { Invitation } from "./offer/invitation/invitation.tsx";
-// export { Catering } from "./offer/catering/catering.tsx";
-// export { Layette } from "./offer/layette/layette.tsx";
-// export { Cost } from "./offer/cost/cost.tsx";
+export { Invitation } from "./offer/invitation/invitation.tsx";
+export { Catering } from "./offer/catering/catering.tsx";
+export { Layette } from "./offer/layette/layette.tsx";
+export { Cost } from "./offer/cost/cost.tsx";
 
 // export { Gallery } from "./gallery/gallery.tsx";
 
