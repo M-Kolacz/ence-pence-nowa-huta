@@ -15,7 +15,7 @@ export { Catering } from "./offer/catering/catering.tsx";
 export { Layette } from "./offer/layette/layette.tsx";
 export { Cost } from "./offer/cost/cost.tsx";
 
-// export { Gallery } from "./gallery/gallery.tsx";
+export { Gallery } from "./gallery/gallery.tsx";
 
 // export { Contact } from "./contact/contact/contact.tsx";
 // export { Map } from "./contact/map/map.tsx";
