@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "#app/styles/global.css";
 import { roboto, robotoCondensed } from "#app/styles/font.ts";
+import { AppContainer, Main } from "#app/components/templates";
+import { Header, Footer } from "#app/components/organisms";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,9 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} ${robotoCondensed.variable} antialiased`}
+        className={`${roboto.className} ${robotoCondensed.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <AppContainer>
+          <Header />
+          <Main>{children}</Main>
+          <Footer />
+        </AppContainer>
       </body>
     </html>
   );
