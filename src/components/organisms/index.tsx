@@ -7,8 +7,8 @@ export { OurApproach } from "./homepage/our-approach/our-approach.tsx";
 export { Testimonials } from "./homepage/testimonials/testimonials.tsx";
 export { IntroGallery } from "./homepage/intro-gallery/intro-gallery.tsx";
 
-// export { Registration } from "./news/registration/registration.tsx";
-// export { Donation } from "./news/donation/donation.tsx";
+export { Registration } from "./news/registration/registration.tsx";
+export { Donation } from "./news/donation/donation.tsx";
 
 // export { Invitation } from "./offer/invitation/invitation.tsx";
 // export { Catering } from "./offer/catering/catering.tsx";
