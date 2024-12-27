@@ -1,8 +1,8 @@
-import parent1 from "#app/images/parents/1.svg?url";
-import parent2 from "#app/images/parents/2.svg?url";
-import parent3 from "#app/images/parents/3.svg?url";
-import parent4 from "#app/images/parents/4.svg?url";
-import parent5 from "#app/images/parents/5.svg?url";
+import parent1 from "#app/images/parents/1.svg";
+import parent2 from "#app/images/parents/2.svg";
+import parent3 from "#app/images/parents/3.svg";
+import parent4 from "#app/images/parents/4.svg";
+import parent5 from "#app/images/parents/5.svg";
 
 export const parents = [
   {
