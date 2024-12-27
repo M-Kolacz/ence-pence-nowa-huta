@@ -4,7 +4,7 @@ import layetteSrc from "#app/images/layette.svg";
 import Image from "next/image";
 
 export const Layette = () => {
-  const layetteTitle = "catering";
+  const layetteTitle = "leyette";
   return (
     <Section
       className="flex flex-col gap-strong md:flex-row md:items-center"

@@ -4,7 +4,7 @@ import costSrc from "#app/images/cost.svg";
 import Image from "next/image";
 
 export const Cost = () => {
-  const CostTitle = "catering";
+  const CostTitle = "cost";
   return (
     <Section
       className="flex flex-col gap-strong md:flex-row md:items-center"
