@@ -12,8 +12,8 @@ permissions:
   contents: read
 
 jobs:
-  lint:
-    name: ⬣ ESLint
+  build:
+    name: 🏗️ Build project
     runs-on: ubuntu-22.04
     steps:
       - name: ⬇️ Checkout repo
@@ -27,26 +27,8 @@ jobs:
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
 
-      - name: 🔬 Lint
-        run: npm run lint
-
-  typecheck:
-    name: ʦ TypeScript
-    runs-on: ubuntu-22.04
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v4
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-      - name: 🔎 Type check
-        run: npm run typecheck
+      - name: 🏗️ Build project (linting + typecheck)
+        run: npm run build
 
   storybook:
     name: 🔬 Storybook - components tests
