@@ -40,7 +40,7 @@ export const Testimonials = () => {
             {testimonials.map(
               ({ avatarCaption, avatarTitle, description, src }) => (
                 <CarouselItem
-                  key={src}
+                  key={avatarTitle}
                   className="flex basis-full flex-col items-center gap-subtle"
                 >
                   <p className="max-w-prose flex-grow text-center text-p1 text-text-subtle">
