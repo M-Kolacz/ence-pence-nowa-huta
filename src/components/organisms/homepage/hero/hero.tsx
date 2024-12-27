@@ -2,6 +2,7 @@ import { Button } from "#app/components/atoms";
 import { Section } from "#app/components/templates";
 import Image from "next/image";
 import heroSrc from "#app/images/happy-baby.svg";
+import Link from "next/link";
 
 export const Hero = () => {
   const heroTitle = "hero-title";
@@ -26,10 +27,10 @@ export const Hero = () => {
         </div>
         <div className="flex flex-wrap gap-subtle">
           <Button asChild>
-            <a href="/oferta">Poznaj naszą ofertę</a>
+            <Link href="/oferta">Poznaj naszą ofertę</Link>
           </Button>
-          <Button variant="outline">
-            <a href="/kontakt">Zapytaj nas</a>
+          <Button variant="outline" asChild>
+            <Link href="/kontakt">Zapytaj nas</Link>
           </Button>
         </div>
       </div>

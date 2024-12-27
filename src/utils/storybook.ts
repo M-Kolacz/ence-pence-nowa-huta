@@ -1,6 +1,7 @@
 import { composeStories, type StoryFn } from "@storybook/react";
 import { type ComponentType, type ComponentProps } from "react";
 import { type STORYBOOK_VIEWPORTS, allModes } from "../../.storybook/modes.ts";
+import { LooseAutocomplete } from "#app/types/helpers.ts";
 
 export const getStoriesTestCases = (stories: unknown) => {
   //@ts-expect-error No story type from Storybook
@@ -27,6 +28,16 @@ export const disableControls = <Component extends ComponentType<any>>(
 
   return disabledOptions;
 };
+
+type A11yRules = LooseAutocomplete<"color-contrast">;
+
+export const disableA11yRules = (rules: A11yRules[]) => ({
+  a11y: {
+    config: {
+      rules: rules.map((rule) => ({ id: rule, enabled: false })),
+    },
+  },
+});
 
 export const setViewport = (device: keyof typeof STORYBOOK_VIEWPORTS) => ({
   viewport: {
