@@ -1,5 +1,7 @@
-import { useId } from "react";
-import { Input, Textarea, Label } from "#app/components/atoms";
+"use client";
+import { ComponentProps, useId } from "react";
+import { Input, Textarea, Label, Button } from "#app/components/atoms";
+import { useFormStatus } from "react-dom";
 
 export type ListOfErrors = Array<string | null | undefined> | null | undefined;
 
@@ -84,3 +86,10 @@ export function TextareaField({
     </div>
   );
 }
+
+//TODO: Move to atoms
+export const SubmitButton = (props: ComponentProps<typeof Button>) => {
+  const status = useFormStatus();
+
+  return <Button disabled={status.pending} {...props} />;
+};

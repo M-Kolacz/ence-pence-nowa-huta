@@ -9,8 +9,12 @@ import {
 import { getZodConstraint, parseWithZod } from "@conform-to/zod";
 import { useEffect, type ComponentProps } from "react";
 import { toast } from "sonner";
-import { Button } from "#app/components/atoms";
-import { Field, TextareaField, Toaster } from "#app/components/molecules";
+import {
+  Field,
+  TextareaField,
+  Toaster,
+  SubmitButton,
+} from "#app/components/molecules";
 import { Section } from "#app/components/templates";
 import { cn } from "#app/utils/misc.tsx";
 import { ContactFormSchema } from "./contact-form.helpers";
@@ -93,9 +97,9 @@ export const ContactForm = ({
           errors={fields.message.errors}
         />
 
-        <Button type="submit" className="w-fit">
+        <SubmitButton type="submit" className="w-fit">
           Wyślij wiadomość
-        </Button>
+        </SubmitButton>
       </form>
       <Toaster />
     </Section>
