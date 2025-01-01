@@ -17,9 +17,9 @@ export const sendEmailServerAction = async (
     };
   }
 
-  await sendEmail(submission.value);
+  const response = await sendEmail(submission.value);
 
   return {
-    status: "email-sent",
-  };
+    status: response.ok ? "email-sent" : "email-failed",
+  } as const;
 };

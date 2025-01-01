@@ -1,4 +1,3 @@
-import emailjs from "@emailjs/nodejs";
 import { z } from "zod";
 
 export const ContactFormSchema = z.object({
@@ -14,13 +13,15 @@ export const sendEmail = async (data: {
   message: string;
   topic: string;
 }) => {
-  return await emailjs.send(
-    process.env.EMAIL_SERVICE_ID,
-    process.env.EMAIL_TEMPLATE_ID,
-    data,
-    {
-      publicKey: process.env.EMAIL_PUBLIC_KEY,
-      privateKey: process.env.EMAIL_PRIVATE_KEY,
-    }
-  );
+  return await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+    method: "POST",
+    body: JSON.stringify({
+      service_id: process.env.EMAIL_SERVICE_ID,
+      template_id: process.env.EMAIL_TEMPLATE_ID,
+      user_id: process.env.EMAIL_PUBLIC_KEY,
+      accessToken: process.env.EMAIL_PRIVATE_KEY,
+      template_params: data,
+    }),
+    headers: { "Content-Type": "application/json" },
+  });
 };

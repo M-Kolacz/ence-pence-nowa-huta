@@ -9,12 +9,8 @@ import {
 import { getZodConstraint, parseWithZod } from "@conform-to/zod";
 import { useEffect, type ComponentProps } from "react";
 import { toast } from "sonner";
-import {
-  Field,
-  TextareaField,
-  Toaster,
-  SubmitButton,
-} from "#app/components/molecules";
+import { Field, TextareaField, SubmitButton } from "#app/components/molecules";
+import { Toaster } from "#app/components/molecules";
 import { Section } from "#app/components/templates";
 import { cn } from "#app/utils/misc.tsx";
 import { ContactFormSchema } from "./contact-form.helpers";
@@ -38,6 +34,9 @@ export const ContactForm = ({
       return parseWithZod(formData, { schema: ContactFormSchema });
     },
     lastResult: formState?.result,
+    onSubmit: () => {
+      toast.dismiss();
+    },
     shouldRevalidate: "onBlur",
     defaultValue: {
       email: "michal.kolacz44@gmail.com",
@@ -47,8 +46,19 @@ export const ContactForm = ({
   });
 
   useEffect(() => {
-    if (formState?.status === "email-sent") {
-      toast("Done");
+    if (isPending) {
+      toast.dismiss();
+      toast.loading("Sending email");
+    }
+
+    if (formState?.status === "email-sent" && !isPending) {
+      toast.dismiss();
+      toast.success("Done");
+    }
+
+    if (formState?.status === "email-failed" && !isPending) {
+      toast.dismiss();
+      toast.error("Failed");
     }
   }, [formState?.status, isPending]);
 
