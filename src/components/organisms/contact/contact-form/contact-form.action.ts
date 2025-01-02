@@ -25,7 +25,9 @@ export const sendEmailServerAction = async (
     return {
       status: "email-failed",
       result: submission.reply({
-        formErrors: ["Nie udało się wysłać Twojej wiadomości"],
+        formErrors: [
+          "Nie udało się wysłać wiadomości do żłobka. Spróbuj ponownie za chwilę. W razie dalszych trudności prosimy o kontakt bezpośredni na adres zlobekhuta@gmail.com.",
+        ],
       }),
     } as const;
   }

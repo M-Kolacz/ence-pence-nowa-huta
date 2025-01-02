@@ -2,10 +2,16 @@ import { z } from "zod";
 
 export const ContactFormSchema = z.object({
   email: z
-    .string({ message: "Pole jest wymagane" })
-    .email({ message: "Podany adres email jest nieprawidłowy" }),
-  topic: z.string({ message: "Pole jest wymagane" }).min(2).max(50),
-  message: z.string({ message: "Pole jest wymagane" }).min(10).max(500),
+    .string({ message: "Adres e-mail jest wymagany." })
+    .email({ message: "Podany adres e-mail ma nieprawidłowy format." }),
+  topic: z
+    .string({ message: "Temat wiadomości jest wymagany." })
+    .min(2, "Temat wiadomości musi mieć co najmniej 2 znaki.")
+    .max(50, "Temat wiadomości nie może mieć więcej niż 50 znaków."),
+  message: z
+    .string({ message: "Wiadomość jest wymagana." })
+    .min(10, "Wiadomość musi mieć co najmniej 10 znaków.")
+    .max(500, "Wiadomość nie może mieć więcej niż 500 znaków."),
 });
 
 export const sendEmail = async (data: {

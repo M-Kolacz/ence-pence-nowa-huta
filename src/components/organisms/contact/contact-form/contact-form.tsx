@@ -44,17 +44,24 @@ export const ContactForm = ({
   useEffect(() => {
     if (isPending) {
       toast.dismiss();
-      toast.loading("Sending email");
+      toast.loading("Wysyłanie wiadomości...", {
+        description: "Proces może chwilę potrwać. Dziękujemy za wyrozumiałość.",
+      });
     }
 
     if (formState?.status === "email-sent" && !isPending) {
       toast.dismiss();
-      toast.success("Done");
+      toast.success("Dziękujemy za wiadomość!", {
+        description:
+          "Twoja wiadomość została pomyślnie wysłana. Skontaktujemy się z Tobą wkrótce.",
+      });
     }
 
     if (formState?.status === "email-failed" && !isPending) {
       toast.dismiss();
-      toast.error("Failed");
+      toast.error("Nie udało się wysłać wiadomości.", {
+        description: "Przepraszamy za utrudnienia. Spróbuj ponownie za chwilę.",
+      });
     }
   }, [formState?.status, isPending]);
 
@@ -77,7 +84,7 @@ export const ContactForm = ({
       <form action={action} className="flex flex-col" {...getFormProps(form)}>
         <div className="flex flex-col md:flex-row md:gap-subtle">
           <Field
-            className="grow"
+            className="md:w-1/2"
             labelProps={{ children: "Adres e-mail" }}
             inputProps={{
               ...getInputProps(fields.email, { type: "email" }),
@@ -85,7 +92,7 @@ export const ContactForm = ({
             errors={fields.email.errors}
           />
           <Field
-            className="grow"
+            className="md:w-1/2"
             labelProps={{ children: "Temat wiadomości" }}
             inputProps={{
               ...getInputProps(fields.topic, { type: "text" }),
@@ -107,7 +114,11 @@ export const ContactForm = ({
           Wyślij wiadomość
         </SubmitButton>
 
-        <ErrorList errors={form.errors} id={form.errorId} className="pt-2" />
+        <ErrorList
+          errors={form.errors}
+          id={form.errorId}
+          className="pt-2 max-w-prose"
+        />
       </form>
       <Toaster />
     </Section>
