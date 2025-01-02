@@ -2,20 +2,23 @@
 import { ComponentProps, useId } from "react";
 import { Input, Textarea, Label, Button } from "#app/components/atoms";
 import { useFormStatus } from "react-dom";
+import { cn } from "#app/utils/misc";
 
 export type ListOfErrors = Array<string | null | undefined> | null | undefined;
 
 export function ErrorList({
   id,
   errors,
+  className,
 }: {
   errors?: ListOfErrors;
   id?: string;
+  className?: string;
 }) {
   const errorsToRender = errors?.filter(Boolean);
   if (!errorsToRender?.length) return null;
   return (
-    <ul id={id} className="flex flex-col gap-1">
+    <ul id={id} className={cn("flex flex-col gap-1", className)}>
       {errorsToRender.map((error) => (
         <li key={error} className="text-sm text-destructive">
           {error}

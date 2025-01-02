@@ -13,7 +13,7 @@ export const sendEmail = async (data: {
   message: string;
   topic: string;
 }) => {
-  return await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+  return await fetch(process.env.EMAIL_API_URL, {
     method: "POST",
     body: JSON.stringify({
       service_id: process.env.EMAIL_SERVICE_ID,

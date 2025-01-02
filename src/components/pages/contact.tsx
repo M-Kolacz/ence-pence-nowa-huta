@@ -5,7 +5,7 @@ export const ContactPage = () => {
     <>
       <Contact />
       <Map />
-      <ContactForm />
+      <ContactForm className="md:-mt-[20%]" />
     </>
   );
 };

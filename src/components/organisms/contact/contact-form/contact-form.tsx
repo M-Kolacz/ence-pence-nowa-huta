@@ -1,5 +1,4 @@
 "use client";
-
 import {
   useForm,
   getFormProps,
@@ -9,7 +8,12 @@ import {
 import { getZodConstraint, parseWithZod } from "@conform-to/zod";
 import { useEffect, type ComponentProps } from "react";
 import { toast } from "sonner";
-import { Field, TextareaField, SubmitButton } from "#app/components/molecules";
+import {
+  Field,
+  TextareaField,
+  SubmitButton,
+  ErrorList,
+} from "#app/components/molecules";
 import { Toaster } from "#app/components/molecules";
 import { Section } from "#app/components/templates";
 import { cn } from "#app/utils/misc.tsx";
@@ -34,15 +38,7 @@ export const ContactForm = ({
       return parseWithZod(formData, { schema: ContactFormSchema });
     },
     lastResult: formState?.result,
-    onSubmit: () => {
-      toast.dismiss();
-    },
     shouldRevalidate: "onBlur",
-    defaultValue: {
-      email: "michal.kolacz44@gmail.com",
-      topic: "testtesttesttesttest",
-      message: "testtesttesttesttesttest",
-    },
   });
 
   useEffect(() => {
@@ -110,6 +106,8 @@ export const ContactForm = ({
         <SubmitButton type="submit" className="w-fit">
           Wyślij wiadomość
         </SubmitButton>
+
+        <ErrorList errors={form.errors} id={form.errorId} className="pt-2" />
       </form>
       <Toaster />
     </Section>
