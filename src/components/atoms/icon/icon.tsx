@@ -4,9 +4,19 @@ import { type IconName } from "./icons/name.ts";
 
 export type { IconName };
 
+export const sizeClassName = {
+  font: "w-[1em] h-[1em]",
+  small: "w-4 h-4",
+  medium: "w-6 h-6",
+  large: "w-8 h-8",
+  extraLarge: "w-16 h-16",
+} as const;
+export type Size = keyof typeof sizeClassName;
+export const sizes = Object.keys(sizeClassName) as Size[];
+
 export type IconProps = {
   name: IconName;
-
+  size?: Size;
   /**
    * Pass `title` prop to the `Icon` component to get `<title>` element rendered
    * in the SVG container, providing this way for accessibility.
@@ -27,20 +37,30 @@ export function Icon({
   className,
   title,
   children,
+  size = "medium",
   ...props
 }: IconProps) {
   if (children) {
     return (
       <span className={`inline-flex items-center`}>
-        <Icon name={name} className={className} title={title} {...props} />
+        <Icon
+          size={size}
+          name={name}
+          className={className}
+          title={title}
+          {...props}
+        />
         {children}
       </span>
     );
   }
   return (
-    <svg {...props} className={cn("inline h-6 w-6 self-center", className)}>
+    <svg
+      {...props}
+      className={cn(sizeClassName[size], "inline self-center", className)}
+    >
       {title ? <title>{title || name}</title> : null}
-      <use href={`sprite.svg#${name}`} />
+      <use href={`icons/sprite.svg#${name}`} />
     </svg>
   );
 }
