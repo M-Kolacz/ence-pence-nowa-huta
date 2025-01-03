@@ -12,8 +12,6 @@ const NavigationLink = (props: ComponentProps<"a">) => {
   const currentPathname = usePathname();
   const isActiveLink = currentPathname === href;
 
-  console.log({ currentPathname, isActiveLink });
-
   return (
     <Link
       className={cn(variants({ active: isActiveLink }), className)}
