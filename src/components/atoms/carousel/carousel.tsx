@@ -15,12 +15,9 @@ import {
   type ComponentProps,
   type KeyboardEvent,
 } from "react";
-import { Button, Dot } from "#app/components/atoms";
+import { Button, Dot, Icon } from "#app/components/atoms";
 import { cn } from "#app/utils/misc.tsx";
 import { useDotButton } from "./carousel.helpers";
-import nextSrc from "./next.png";
-import prevSrc from "./prev.png";
-import Image from "next/image";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -228,7 +225,7 @@ const CarouselPrevious = forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <Image src={prevSrc} alt="" className="h-6 w-6" />
+      <Icon name="prev" />
       <span className="sr-only">Poprzednia opinia</span>
     </Button>
   );
@@ -257,7 +254,7 @@ const CarouselNext = forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <Image src={nextSrc} alt="" className="h-6 w-6" />
+      <Icon name="next" />
       <span className="sr-only">Następna opinia</span>
     </Button>
   );

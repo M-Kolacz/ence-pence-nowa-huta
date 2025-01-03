@@ -33,7 +33,7 @@ export const Layette = () => {
               </p>
             </li>
             <li className="flex gap-2 align-middle">
-              <Icon name="baby-shoes" className="h-8 w-8" />
+              <Icon name="shoes" className="h-8 w-8" />
               <p className="max-w-prose text-p1 text-text-subtle">
                 Obuwie na zmianę (na rzepy lub zatrzask) dla chodzących dzieci,
                 lub skarpetki antypoślizgowe.

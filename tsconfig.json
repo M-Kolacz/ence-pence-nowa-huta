@@ -23,6 +23,6 @@
       "#app/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "other/build-icons.mts"],
   "exclude": ["node_modules"]
 }
