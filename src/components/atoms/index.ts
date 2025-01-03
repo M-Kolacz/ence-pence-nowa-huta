@@ -9,3 +9,4 @@ export { Link } from "./link/link.tsx";
 export { Input } from "./input/input.tsx";
 export { Textarea } from "./textarea/textarea.tsx";
 export { Label } from "./label/label.tsx";
+export { Logo } from "./logo/logo.tsx";

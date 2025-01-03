@@ -10,6 +10,7 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerTrigger,
+  Logo,
 } from "#app/components/atoms";
 import { navigationLinks } from "#app/ssot/navigation.ts";
 import logoUrl from "#app/images/logo.svg";
@@ -21,13 +22,7 @@ export const Header = () => {
 
   return (
     <header className="col-span-full flex items-center justify-between">
-      <Link href="/">
-        <Image
-          src={logoUrl}
-          alt="Ence Pence Nowa Huta"
-          className="md:h-[121px] md:w-[150px]"
-        />
-      </Link>
+      <Logo />
       <Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
         <DrawerTrigger asChild>
           <Button

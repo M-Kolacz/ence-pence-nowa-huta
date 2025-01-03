@@ -27,6 +27,9 @@ const preview: Preview = {
       viewports: STORYBOOK_VIEWPORTS,
       defaultViewport: STORYBOOK_VIEWPORTS.Desktop.name,
     },
+    nextjs: {
+      appDirectory: true,
+    },
     options: {
       storySort: {
         order: [
