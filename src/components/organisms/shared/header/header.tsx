@@ -11,6 +11,7 @@ import {
   DrawerHeader,
   DrawerTrigger,
   Logo,
+  DrawerTitle,
 } from "#app/components/atoms";
 import { navigationLinks } from "#app/ssot/navigation.ts";
 import logoUrl from "#app/images/logo.svg";
@@ -19,6 +20,8 @@ import Image from "next/image";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const closeDrawer = () => setIsOpen(false);
 
   return (
     <header className="col-span-full flex items-center justify-between">
@@ -37,6 +40,7 @@ export const Header = () => {
         </DrawerTrigger>
 
         <DrawerContent className="flex flex-col gap-section p-app outline-none">
+          <DrawerTitle className="sr-only">Nawigacja strony</DrawerTitle>
           <DrawerHeader className="flex items-center justify-between">
             <Image
               src={logoUrl}
@@ -57,6 +61,7 @@ export const Header = () => {
                   variant="secondary"
                   className="w-full justify-start text-left"
                   asChild
+                  onClick={closeDrawer}
                 >
                   <Link href={link.href}>
                     <Icon name={link.icon} className="mr-2.5" />
