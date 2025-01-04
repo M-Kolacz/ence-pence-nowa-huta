@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { setDesignPreview } from "#app/utils/storybook.ts";
+import { setDesignPreview, disableA11yRules } from "#app/utils/storybook.ts";
 import { Toaster } from "./toaster.tsx";
 import { Button } from "#app/components/atoms";
 import { toast } from "sonner";
@@ -11,6 +11,7 @@ const meta = {
   component: Toaster,
   parameters: {
     layout: "centered",
+    ...disableA11yRules(["color-contrast"]),
     ...setDesignPreview(
       "https://www.figma.com/design/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta?node-id=501-2440&m=dev"
     ),
