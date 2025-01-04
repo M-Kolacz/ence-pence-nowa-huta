@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { FormResponse } from "./contact-form.action";
 
 export const ContactFormSchema = z.object({
   email: z
@@ -30,6 +31,13 @@ export const sendEmail = async (data: {
     }),
     headers: { "Content-Type": "application/json" },
   });
+};
+
+export const getFormStatus = (isPending: boolean, response: FormResponse) => {
+  if (isPending) return "loading";
+  if (response === "email-sent" && !isPending) return "success";
+  if (response === "email-failed" && !isPending) return "error";
+  return "idle";
 };
 
 export const toasts = {

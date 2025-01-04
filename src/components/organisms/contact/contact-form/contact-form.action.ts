@@ -2,7 +2,7 @@
 import { ContactFormSchema, sendEmail } from "./contact-form.helpers";
 import { parseWithZod } from "@conform-to/zod";
 
-export type Response = Awaited<
+export type FormResponse = Awaited<
   ReturnType<typeof sendEmailServerAction>
 >["response"];
 

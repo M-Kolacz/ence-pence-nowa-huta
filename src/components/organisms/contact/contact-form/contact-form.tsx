@@ -17,16 +17,13 @@ import {
 import { Toaster } from "#app/components/molecules";
 import { Section } from "#app/components/templates";
 import { cn } from "#app/utils/misc.tsx";
-import { ContactFormSchema, toasts } from "./contact-form.helpers";
-import { sendEmailServerAction, Response } from "./contact-form.action";
+import {
+  ContactFormSchema,
+  toasts,
+  getFormStatus,
+} from "./contact-form.helpers";
+import { sendEmailServerAction } from "./contact-form.action";
 import { useActionState } from "react";
-
-const getFormStatus = (isPending: boolean, response: Response) => {
-  if (isPending) return "loading";
-  if (response === "email-sent" && !isPending) return "success";
-  if (response === "email-failed" && !isPending) return "error";
-  return "idle";
-};
 
 export const ContactForm = ({
   className,
@@ -52,6 +49,7 @@ export const ContactForm = ({
     const formStatus = getFormStatus(isPending, formState?.response);
     if (formStatus === "idle") return;
 
+    toast.dismiss();
     toast[formStatus](toasts[formStatus].title, {
       description: toasts[formStatus].description,
     });
