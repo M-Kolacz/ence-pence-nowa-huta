@@ -46,7 +46,7 @@ export const Catering = () => {
         <Image
           src={beHealthySrc}
           alt=""
-          className="max-h-[131px] max-w-[387px]"
+          className="max-h-[131px] max-w-[387px] w-full"
         />
       </div>
       <Image
