@@ -1,23 +1,18 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { setDesignPreview } from "#app/utils/storybook.ts";
-import { Link } from "./link.tsx";
+import { Logo } from "./logo.tsx";
 
 const meta = {
-  title: "Atoms/Link",
-  component: Link,
+  title: "Atoms/Logo",
+  component: Logo,
   parameters: {
     layout: "centered",
     ...setDesignPreview(
-      "https://www.figma.com/design/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta?node-id=501-2351&m=dev"
+      "https://www.figma.com/design/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta?node-id=501-2348&m=dev"
     ),
   },
-  args: {
-    children: "Click me",
-    href: "https://www.facebook.com/encepencehuta",
-  },
-
   tags: ["autodocs"],
-} satisfies Meta<typeof Link>;
+} satisfies Meta<typeof Logo>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

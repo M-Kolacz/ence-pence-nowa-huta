@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { FormResponse } from "./contact-form.action";
 
 export const ContactFormSchema = z.object({
   email: z
@@ -30,4 +31,27 @@ export const sendEmail = async (data: {
     }),
     headers: { "Content-Type": "application/json" },
   });
+};
+
+export const getFormStatus = (isPending: boolean, response: FormResponse) => {
+  if (isPending) return "loading";
+  if (response === "email-sent" && !isPending) return "success";
+  if (response === "email-failed" && !isPending) return "error";
+  return "idle";
+};
+
+export const toasts = {
+  loading: {
+    title: "Wysyłanie wiadomości...",
+    description: "Proces może chwilę potrwać. Dziękujemy za wyrozumiałość.",
+  },
+  success: {
+    title: "Dziękujemy za wiadomość!",
+    description:
+      "Twoja wiadomość została pomyślnie wysłana. Skontaktujemy się z Tobą wkrótce.",
+  },
+  error: {
+    title: "Nie udało się wysłać wiadomości.",
+    description: "Przepraszamy za utrudnienia. Spróbuj ponownie za chwilę.",
+  },
 };

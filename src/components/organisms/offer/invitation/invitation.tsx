@@ -1,4 +1,4 @@
-import { Icon, Link } from "#app/components/atoms";
+import { Icon, Link, ListItem } from "#app/components/atoms";
 import { Section } from "#app/components/templates";
 import invitationSrc from "#app/images/invitation.svg";
 import { getRegistrationYears } from "../../news/registration/registration.helpers";
@@ -26,12 +26,11 @@ export const Invitation = () => {
             wymaganych dokumentów, które znajdziesz poniżej:
           </p>
           <ul>
-            <li className="flex gap-2  items-center">
-              <Icon name="folder" className="h-8 w-8" />
+            <ListItem icon={<Icon name="folder" size="large" />}>
               <Link href="/docs/karta-zgłoszenia-dziecka.doc" className="h-fit">
                 Karta zgłoszenia dziecka do żłobka
               </Link>
-            </li>
+            </ListItem>
           </ul>
         </div>
       </div>

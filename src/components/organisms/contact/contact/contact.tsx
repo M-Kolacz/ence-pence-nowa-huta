@@ -17,7 +17,7 @@ export const Contact = () => {
         <div className="flex flex-col gap-strong">
           <ul className="flex flex-col gap-strong">
             <li className="flex gap-base">
-              <Icon name="kindergarten" className="h-16 w-16" />
+              <Icon size="large" name="kindergarten" />
               <div className="flex flex-col gap-2">
                 <p className="text-p3 text-text-inactive">Adres</p>
                 <address className="text-p1 not-italic text-text-subtle">
@@ -27,7 +27,7 @@ export const Contact = () => {
               </div>
             </li>
             <li className="flex gap-base">
-              <Icon name="email" className="h-16 w-16" />
+              <Icon size="large" name="email" />
               <div className="flex flex-col gap-2">
                 <p className="text-p3 text-text-inactive">Adres email</p>
                 <Link href="mailto:zlobekhuta@gmail.com">
@@ -36,14 +36,14 @@ export const Contact = () => {
               </div>
             </li>
             <li className="flex gap-base">
-              <Icon name="phone-call" className="h-16 w-16" />
+              <Icon size="large" name="phone-call" />
               <div className="flex flex-col gap-2">
                 <p className="text-p3 text-text-inactive">Number telefonu</p>
                 <Link href="tel:739-048-513">739 048 513</Link>
               </div>
             </li>
             <li className="flex justify-start gap-base">
-              <Icon name="web" className="h-16 w-16 shrink-0" />
+              <Icon size="large" name="web" className="shrink-0" />
               <div className="flex flex-col gap-2">
                 <p className="text-p3 text-text-inactive">Facebook</p>
                 <Link
