@@ -1,4 +1,4 @@
-import { Icon } from "#app/components/atoms";
+import { Icon, ListItem } from "#app/components/atoms";
 import { Section } from "#app/components/templates";
 import layetteSrc from "#app/images/layette.svg";
 import Image from "next/image";
@@ -19,38 +19,23 @@ export const Layette = () => {
         </h2>
         <div className="flex flex-col gap-subtle">
           <ul className="flex flex-col gap-4">
-            <li className="flex gap-2 align-middle">
-              <Icon name="diaper" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Środki higieniczne: pampersy oraz chusteczki nawilżające.
-              </p>
-            </li>
-            <li className="flex gap-2 align-middle">
-              <Icon name="milk-bottle" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Kubek lub butelka - w przypadku, gdy dziecko nie pije jeszcze z
-                normalnego kubka.
-              </p>
-            </li>
-            <li className="flex gap-2 align-middle">
-              <Icon name="shoes" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Obuwie na zmianę (na rzepy lub zatrzask) dla chodzących dzieci,
-                lub skarpetki antypoślizgowe.
-              </p>
-            </li>
-            <li className="flex gap-2 align-middle">
-              <Icon name="blanket" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Komplet pościeli: kocyk lub kołderka, poduszka, prześcieradło.
-              </p>
-            </li>
-            <li className="flex gap-2 align-middle">
-              <Icon name="pacifier" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Smoczek - tylko jeśli dziecko go potrzebuje.
-              </p>
-            </li>
+            <ListItem icon={<Icon name="diaper" size="large" />}>
+              Środki higieniczne: pampersy oraz chusteczki nawilżające.
+            </ListItem>
+            <ListItem icon={<Icon name="milk-bottle" size="large" />}>
+              Kubek lub butelka - w przypadku, gdy dziecko nie pije jeszcze z
+              normalnego kubka.
+            </ListItem>
+            <ListItem icon={<Icon name="shoes" size="large" />}>
+              Obuwie na zmianę (na rzepy lub zatrzask) dla chodzących dzieci,
+              lub skarpetki antypoślizgowe.
+            </ListItem>
+            <ListItem icon={<Icon name="blanket" size="large" />}>
+              Komplet pościeli: kocyk lub kołderka, poduszka, prześcieradło.
+            </ListItem>
+            <ListItem icon={<Icon name="pacifier" size="large" />}>
+              Smoczek - tylko jeśli dziecko go potrzebuje.
+            </ListItem>
           </ul>
           <p className="max-w-prose text-p1 text-text-subtle">
             Proszę pamiętać, aby wszystkie rzeczy dziecka były podpisane.

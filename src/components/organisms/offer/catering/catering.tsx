@@ -1,4 +1,4 @@
-import { Icon } from "#app/components/atoms";
+import { Icon, ListItem } from "#app/components/atoms";
 import { Section } from "#app/components/templates";
 import beHealthySrc from "#app/images/be-healthy.png";
 import fruidSaladSrc from "#app/images/fruid-salad.svg";
@@ -20,30 +20,18 @@ export const Catering = () => {
         </h2>
         <div className="flex flex-col gap-subtle">
           <ul className="flex flex-col gap-4">
-            <li className="flex gap-2 align-middle">
-              <Icon name="breakfast" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Śniadanie - 2,00 zł
-              </p>
-            </li>
-            <li className="flex gap-2 align-middle">
-              <Icon name="cereal" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Drugie śniadanie - 1,50 zł
-              </p>
-            </li>
-            <li className="flex gap-2 align-middle">
-              <Icon name="salad" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Obiad (zupa + drugie danie) - 9,50 zł
-              </p>
-            </li>
-            <li className="flex gap-2 align-middle">
-              <Icon name="bubble-tea" className="h-8 w-8" />
-              <p className="max-w-prose text-p1 text-text-subtle">
-                Podwieczorek - 2,00 zł
-              </p>
-            </li>
+            <ListItem icon={<Icon name="breakfast" size="large" />}>
+              Śniadanie - 2,00 zł
+            </ListItem>
+            <ListItem icon={<Icon name="cereal" size="large" />}>
+              Drugie śniadanie - 1,50 zł
+            </ListItem>
+            <ListItem icon={<Icon name="salad" size="large" />}>
+              Obiad (zupa + drugie danie) - 9,50 zł
+            </ListItem>
+            <ListItem icon={<Icon name="bubble-tea" size="large" />}>
+              Podwieczorek - 2,00 zł
+            </ListItem>
           </ul>
           <p className="max-w-prose text-p1 text-text-subtle">
             Indywidualnie wyceniamy opłaty za diety specjalistyczne, eliminujące

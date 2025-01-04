@@ -10,3 +10,4 @@ export { Input } from "./input/input.tsx";
 export { Textarea } from "./textarea/textarea.tsx";
 export { Label } from "./label/label.tsx";
 export { Logo } from "./logo/logo.tsx";
+export { ListItem } from "./list-item/list-item.tsx";
