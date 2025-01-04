@@ -24,7 +24,11 @@ export const OurApproach = () => {
           </p>
         </div>
       </div>
-      <Image src={ourApproachSrc} alt="" className=" md:order-first " />
+      <Image
+        src={ourApproachSrc}
+        alt=""
+        className="md:w-[400px] lg:w-[500px] md:order-first"
+      />
     </Section>
   );
 };

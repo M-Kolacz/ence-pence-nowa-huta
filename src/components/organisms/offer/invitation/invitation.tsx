@@ -34,11 +34,7 @@ export const Invitation = () => {
           </ul>
         </div>
       </div>
-      <Image
-        src={invitationSrc}
-        alt=""
-        className="max-h-[500px] max-w-[500px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]"
-      />
+      <Image src={invitationSrc} alt="" className="md:w-[400px] lg:w-[500px]" />
     </Section>
   );
 };

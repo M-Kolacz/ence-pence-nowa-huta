@@ -42,11 +42,7 @@ export const Layette = () => {
           </p>
         </div>
       </div>
-      <Image
-        src={layetteSrc}
-        alt=""
-        className="max-h-[500px] max-w-[500px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]"
-      />
+      <Image src={layetteSrc} alt="" className="md:w-[400px] lg:w-[500px]" />
     </Section>
   );
 };
