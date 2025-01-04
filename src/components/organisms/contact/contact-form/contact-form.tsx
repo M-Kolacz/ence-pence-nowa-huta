@@ -17,9 +17,16 @@ import {
 import { Toaster } from "#app/components/molecules";
 import { Section } from "#app/components/templates";
 import { cn } from "#app/utils/misc.tsx";
-import { ContactFormSchema } from "./contact-form.helpers";
-import { sendEmailServerAction } from "./contact-form.action";
+import { ContactFormSchema, toasts } from "./contact-form.helpers";
+import { sendEmailServerAction, Response } from "./contact-form.action";
 import { useActionState } from "react";
+
+const getFormStatus = (isPending: boolean, response: Response) => {
+  if (isPending) return "loading";
+  if (response === "email-sent" && !isPending) return "success";
+  if (response === "email-failed" && !isPending) return "error";
+  return "idle";
+};
 
 export const ContactForm = ({
   className,
@@ -42,28 +49,13 @@ export const ContactForm = ({
   });
 
   useEffect(() => {
-    if (isPending) {
-      toast.dismiss();
-      toast.loading("Wysyłanie wiadomości...", {
-        description: "Proces może chwilę potrwać. Dziękujemy za wyrozumiałość.",
-      });
-    }
+    const formStatus = getFormStatus(isPending, formState?.response);
+    if (formStatus === "idle") return;
 
-    if (formState?.status === "email-sent" && !isPending) {
-      toast.dismiss();
-      toast.success("Dziękujemy za wiadomość!", {
-        description:
-          "Twoja wiadomość została pomyślnie wysłana. Skontaktujemy się z Tobą wkrótce.",
-      });
-    }
-
-    if (formState?.status === "email-failed" && !isPending) {
-      toast.dismiss();
-      toast.error("Nie udało się wysłać wiadomości.", {
-        description: "Przepraszamy za utrudnienia. Spróbuj ponownie za chwilę.",
-      });
-    }
-  }, [formState?.status, isPending]);
+    toast[formStatus](toasts[formStatus].title, {
+      description: toasts[formStatus].description,
+    });
+  }, [formState?.response, isPending]);
 
   return (
     <Section

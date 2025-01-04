@@ -2,6 +2,10 @@
 import { ContactFormSchema, sendEmail } from "./contact-form.helpers";
 import { parseWithZod } from "@conform-to/zod";
 
+export type Response = Awaited<
+  ReturnType<typeof sendEmailServerAction>
+>["response"];
+
 export const sendEmailServerAction = async (
   prevState: unknown,
   formData: FormData
@@ -23,7 +27,7 @@ export const sendEmailServerAction = async (
 
   if (!response.ok) {
     return {
-      status: "email-failed",
+      response: "email-failed",
       result: submission.reply({
         formErrors: [
           "Nie udało się wysłać wiadomości do żłobka. Spróbuj ponownie za chwilę. W razie dalszych trudności prosimy o kontakt bezpośredni na adres zlobekhuta@gmail.com.",
@@ -33,6 +37,6 @@ export const sendEmailServerAction = async (
   }
 
   return {
-    status: "email-sent",
+    response: "email-sent",
   } as const;
 };

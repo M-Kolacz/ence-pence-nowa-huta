@@ -31,3 +31,19 @@ export const sendEmail = async (data: {
     headers: { "Content-Type": "application/json" },
   });
 };
+
+export const toasts = {
+  loading: {
+    title: "Wysyłanie wiadomości...",
+    description: "Proces może chwilę potrwać. Dziękujemy za wyrozumiałość.",
+  },
+  success: {
+    title: "Dziękujemy za wiadomość!",
+    description:
+      "Twoja wiadomość została pomyślnie wysłana. Skontaktujemy się z Tobą wkrótce.",
+  },
+  error: {
+    title: "Nie udało się wysłać wiadomości.",
+    description: "Przepraszamy za utrudnienia. Spróbuj ponownie za chwilę.",
+  },
+};
