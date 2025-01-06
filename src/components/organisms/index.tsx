@@ -20,3 +20,5 @@ export { Gallery } from "./gallery/gallery.tsx";
 export { Contact } from "./contact/contact/contact.tsx";
 export { Map } from "./contact/map/map.tsx";
 export { ContactForm } from "./contact/contact-form/contact-form.tsx";
+
+export { NotFound } from "./not-found/not-found.tsx";
