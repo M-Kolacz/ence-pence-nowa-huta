@@ -13,7 +13,7 @@ declare global {
       EMAIL_PRIVATE_KEY: string;
 
       SENTRY_AUTH_TOKEN: string;
-      SENTRY_DSN: string;
+      NEXT_PUBLIC_SENTRY_DSN: string;
     }
   }
 }
