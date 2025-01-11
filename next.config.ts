@@ -1,6 +1,10 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
+import  createJiti  from "jiti";
+import { fileURLToPath } from "url";
+const jiti = createJiti(fileURLToPath(import.meta.url));
 
+jiti("./src/utils/env.ts");
 const nextConfig: NextConfig = {
   /* config options here */
 };
