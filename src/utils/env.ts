@@ -11,18 +11,15 @@ export const env = createEnv({
     SENTRY_AUTH_TOKEN: z.string(),
     SENTRY_ORG: z.string(),
     SENTRY_PROJECT: z.string(),
-    NEXT_RUNTIME: z.enum(["nodejs", "edge"]),
   },
   client: {
     NEXT_PUBLIC_GOOGLE_MAP_API_KEY: z.string(),
     NEXT_PUBLIC_GOOGLE_MAP_ID: z.string(),
     NEXT_PUBLIC_SENTRY_DSN: z.string().url(),
-    NEXT_PUBLIC_NODE_ENV: z.enum(["development", "test", "production"]),
   },
   experimental__runtimeEnv: {
     NEXT_PUBLIC_GOOGLE_MAP_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY,
     NEXT_PUBLIC_GOOGLE_MAP_ID: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID,
     NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
-    NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
   },
 });

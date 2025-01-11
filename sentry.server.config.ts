@@ -7,9 +7,9 @@ import { env } from "#app/utils/env";
 
 Sentry.init({
   dsn: env.NEXT_PUBLIC_SENTRY_DSN,
-  environment: env.NEXT_PUBLIC_NODE_ENV,
+  environment: process.env.NODE_ENV,
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
-  tracesSampleRate: env.NEXT_PUBLIC_NODE_ENV === "production" ? 1 : 0,
+  tracesSampleRate: process.env.NODE_ENV === "production" ? 1 : 0,
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
