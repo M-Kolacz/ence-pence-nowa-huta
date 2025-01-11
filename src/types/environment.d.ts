@@ -11,6 +11,11 @@ declare global {
       EMAIL_TEMPLATE_ID: string;
       EMAIL_PUBLIC_KEY: string;
       EMAIL_PRIVATE_KEY: string;
+
+      SENTRY_AUTH_TOKEN: string;
+      NEXT_PUBLIC_SENTRY_DSN: string;
+      SENTRY_ORG: string;
+      SENTRY_PROJECT: string;
     }
   }
 }

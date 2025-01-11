@@ -1,6 +1,7 @@
 "use server";
 import { ContactFormSchema, sendEmail } from "./contact-form.helpers";
 import { parseWithZod } from "@conform-to/zod";
+import * as Sentry from "@sentry/nextjs";
 
 export type FormResponse = Awaited<
   ReturnType<typeof sendEmailServerAction>
@@ -21,6 +22,7 @@ export const sendEmailServerAction = async (
   }
 
   const response = await sendEmail(submission.value).catch((error) => {
+    Sentry.captureException(error);
     console.error("🛑 Error occured while sending email", error);
     return { ok: false };
   });
