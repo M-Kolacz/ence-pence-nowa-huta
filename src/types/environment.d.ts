@@ -14,6 +14,8 @@ declare global {
 
       SENTRY_AUTH_TOKEN: string;
       NEXT_PUBLIC_SENTRY_DSN: string;
+      SENTRY_ORG: string;
+      SENTRY_PROJECT: string;
     }
   }
 }
