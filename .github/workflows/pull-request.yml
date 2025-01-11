@@ -29,6 +29,18 @@ jobs:
 
       - name: 🏗️ Build project (linting + typecheck)
         run: npm run build
+        env:
+          NEXT_PUBLIC_GOOGLE_MAP_API_KEY: ${{secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}}
+          NEXT_PUBLIC_GOOGLE_MAP_ID: ${{secrets.NEXT_PUBLIC_GOOGLE_MAP_ID}}
+          EMAIL_API_URL: ${{secrets.EMAIL_API_URL}}
+          EMAIL_SERVICE_ID: ${{secrets.EMAIL_SERVICE_ID}}
+          EMAIL_TEMPLATE_ID: ${{secrets.EMAIL_TEMPLATE_ID}}
+          EMAIL_PUBLIC_KEY: ${{secrets.EMAIL_PUBLIC_KEY}}
+          EMAIL_PRIVATE_KEY: ${{secrets.EMAIL_PRIVATE_KEY}}
+          SENTRY_AUTH_TOKEN: ${{secrets.SENTRY_AUTH_TOKEN}}
+          NEXT_PUBLIC_SENTRY_DSN: ${{secrets.NEXT_PUBLIC_SENTRY_DSN}}
+          SENTRY_ORG: ${{secrets.SENTRY_ORG}}
+          SENTRY_PROJECT: ${{secrets.SENTRY_PROJECT}}
 
   storybook:
     name: 🔬 Storybook - components tests
