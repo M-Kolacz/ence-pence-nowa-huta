@@ -61,12 +61,3 @@ export const setDesignPreview = (url: string) => {
     },
   };
 };
-
-export const getEnvVariables = () => {
-  return Object.entries(process.env)
-    .filter(([key]) => key.startsWith("PUBLIC_"))
-    .reduce((prev, [key, value]) => {
-      prev[`import.meta.env.${key}`] = JSON.stringify(value);
-      return prev;
-    }, {} as Record<string, string>);
-};
