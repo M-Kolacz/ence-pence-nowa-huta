@@ -1,20 +1,15 @@
-name: "🤐 Create .env File"
+name: "Create .env File"
 description: "A reusable GitHub Action to create a .env file with environment variables."
+inputs:
+  env-variables:
+    description: "A multiline string of environment variables (key=value format)."
+    required: true
 runs:
   using: "composite"
   steps:
-    - name: 🤐 Create .env file
+    - name: Create .env file
       shell: bash
       run: |
-        echo "NEXT_PUBLIC_GOOGLE_MAP_API_KEY=${{secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}}" > .env
-        echo "NEXT_PUBLIC_GOOGLE_MAP_ID=${{secrets.NEXT_PUBLIC_GOOGLE_MAP_ID}}" > .env
-        echo "EMAIL_API_URL=${{secrets.EMAIL_API_URL}}" > .env     
-        echo "EMAIL_SERVICE_ID=${{secrets.EMAIL_SERVICE_ID}}" > .env
-        echo "EMAIL_TEMPLATE_ID=${{secrets.EMAIL_TEMPLATE_ID}}" > .env
-        echo "EMAIL_PUBLIC_KEY=${{secrets.EMAIL_PUBLIC_KEY}}" > .env 
-        echo "EMAIL_PRIVATE_KEY=${{secrets.EMAIL_PRIVATE_KEY}}" > .env
-        echo "SENTRY_AUTH_TOKEN=${{secrets.SENTRY_AUTH_TOKEN}}" > .env
-        echo "NEXT_PUBLIC_SENTRY_DSN=${{secrets.NEXT_PUBLIC_SENTRY_DSN}}" > .env 
-        echo "SENTRY_ORG=${{secrets.SENTRY_ORG}}" > .env
-        echo "SENTRY_PROJECT=${{secrets.SENTRY_PROJECT}}" > .env                             
-        echo ".env file created successfully"
+        echo "${{ inputs.env-variables }}" >> .env
+        echo "✅ .env file created successfully"
+
