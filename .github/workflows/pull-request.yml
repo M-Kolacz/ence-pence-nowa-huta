@@ -21,7 +21,7 @@ jobs:
 
       - name: 🤐 Create .env file
         run: |
-          echo "NEXT_PUBLIC_GOOGLE_MAP_API_KEY=${{secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}}" > .env
+          echo "NEXT_PUBLIC_GOOGLE_MAP_API_KEY='${{secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}}'" > .env
           echo "NEXT_PUBLIC_GOOGLE_MAP_ID=${{secrets.NEXT_PUBLIC_GOOGLE_MAP_ID}}" > .env
           echo "EMAIL_API_URL=${{secrets.EMAIL_API_URL}}" > .env     
           echo "EMAIL_SERVICE_ID=${{secrets.EMAIL_SERVICE_ID}}" > .env
