@@ -19,14 +19,6 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
 
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
       - name: 🤐 Create .env file
         run: |
           echo "NEXT_PUBLIC_GOOGLE_MAP_API_KEY=${{secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}}" > .env
@@ -41,6 +33,14 @@ jobs:
           echo "SENTRY_ORG=${{secrets.SENTRY_ORG}}" > .env
           echo "SENTRY_PROJECT=${{secrets.SENTRY_PROJECT}}" > .env                             
           echo ".env file created successfully"
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
 
       - name: 🏗️ Build project (linting + typecheck)
         run: npm run build
