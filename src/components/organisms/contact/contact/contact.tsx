@@ -30,7 +30,7 @@ export const Contact = () => {
               <Icon size="large" name="email" />
               <div className="flex flex-col gap-2">
                 <p className="text-p3 text-text-inactive">Adres email</p>
-                <Link href="mailto:zlobekhuta@gmail.com">
+                <Link href="mailto:zlobekhuta@gmail.com" className="text-xl">
                   zlobekhuta@gmail.com
                 </Link>
               </div>
@@ -39,7 +39,9 @@ export const Contact = () => {
               <Icon size="large" name="phone-call" />
               <div className="flex flex-col gap-2">
                 <p className="text-p3 text-text-inactive">Number telefonu</p>
-                <Link href="tel:739-048-513">739 048 513</Link>
+                <Link href="tel:739-048-513" className="text-xl">
+                  739 048 513
+                </Link>
               </div>
             </li>
             <li className="flex justify-start gap-base">
@@ -49,7 +51,7 @@ export const Contact = () => {
                 <Link
                   href="https://www.facebook.com/encepencehuta"
                   target="_blank"
-                  className="break-all"
+                  className="break-all text-xl"
                 >
                   facebook.com/encepencehuta
                 </Link>
