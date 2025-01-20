@@ -34,10 +34,11 @@ export const Donation = () => {
         wyłącznie dzieci zamieszkałych na terenie miasta Krakowa. Ewentualne
         uwagi dotyczące udzielanych dotacji należy kierować na adres: Wydział
         Polityki Społecznej i Zdrowia Urzędu Miasta Krakowa, ul.Dekerta 24,
-        30-703 Kraków , <Link href="tel:12-616-92-84">tel. 12 616 92 84</Link>,{" "}
+        30-703 Kraków, <Link href="tel:12-616-92-84">tel. 12 616 92 84</Link>,{" "}
         <Link href="mailto:sz.umk@um.krakow.pl">
           e-mail: sz.umk@um.krakow.pl
         </Link>
+        .
       </p>
     </Section>
   );
