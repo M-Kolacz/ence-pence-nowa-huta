@@ -1,4 +1,4 @@
-name: 👷 Pull request workflow
+name: ⌛ Daily E2E tests
 on:
   schedule:
     - cron: "0 12 * * *"
