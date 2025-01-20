@@ -1,6 +1,7 @@
 "use client";
 import { APIProvider, Map as GoogleMap } from "@vis.gl/react-google-maps";
 import { Section } from "#app/components/templates";
+import { env } from "#app/utils/env";
 
 const position = { lat: 50.07033662490449, lng: 20.039205293759537 };
 const zoom = 18.75;
@@ -19,12 +20,12 @@ export const Map = () => {
       >
         Zobacz, gdzie nas znaleźć
       </h2>
-      <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}>
+      <APIProvider apiKey={env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}>
         <div className="col-span-full -mx-app h-[800px]">
           <GoogleMap
             defaultZoom={zoom}
             defaultCenter={position}
-            mapId={process.env.NEXT_PUBLIC_GOOGLE_MAP_ID}
+            mapId={env.NEXT_PUBLIC_GOOGLE_MAP_ID}
           />
         </div>
       </APIProvider>

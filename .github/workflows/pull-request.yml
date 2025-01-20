@@ -19,6 +19,11 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
 
+      - name: 🤐 Create .env file
+        uses: ./.github/actions/create-env-file
+        with:
+          env-variables: ${{secrets.SECRETS}}
+
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
@@ -38,6 +43,11 @@ jobs:
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
+
+      - name: 🤐 Create .env file
+        uses: ./.github/actions/create-env-file
+        with:
+          env-variables: ${{secrets.SECRETS}}
 
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
