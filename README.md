@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/node-v20.18.0-brightgreen.svg?style=flat-square" alt="node" />
   <img src="https://img.shields.io/badge/npm-v10.8.2-blue.svg?style=flat-square" alt="npm" />
-  <a href="">
+  <a href="./LICENSE.md">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT" />
   </a>
   <a href="https://github.com/Vets-Who-Code/vwc-site/blob/master/.github/contributing.md">
