@@ -33,11 +33,11 @@ The project is built using the following modern technologies and tools:
 - **[Playwright](https://playwright.dev/)**
 - **[Storybook](https://storybook.js.org/)**
 
-## 🚀 Getting Started
+## Getting Started 🚀
 
 Follow these steps to set up and run the project locally on your machine.
 
-### 📋 Prerequisites
+### Prerequisites 📋
 
 Before starting, make sure you have the following tools installed:
 
@@ -65,10 +65,10 @@ $ npm run dev
 
 Open the app in your browser: http://localhost:3000/.
 
-## 🤝 Contributing
+## Contributing 🤝
 
 I welcome and appreciate all contributions! Whether it’s a small bug fix, new feature, or improvement suggestion, your help is valuable. Please read [Contributing Guidelines](./contributing.md) to get started.
 
-## 📝 License
+## License 📝
 
 This project is licensed under the **MIT License**, which allows you to use, modify, and distribute the code freely. See the full license details in the [LICENSE](./LICENSE.md) file.

@@ -1,6 +1,8 @@
-# Contributing to Ency Pence Huta Web App 🤝
+# Contributing to Ence Pence Huta Web App 🤝
 
-Hello and thank you for your interest in contributing to the Ence Pence Huta web app. I appreciate your effort and support. This document provides guidelines for contributing.
+Thank you for your interest in contributing to the **Ence Pence Huta** web app! Whether it’s fixing bugs, adding new features, or improving documentation, your help is appreciated and highly valued.
+
+This document will guide you through the contribution process.
 
 ## Table of Contents 📜
 
@@ -12,21 +14,29 @@ Hello and thank you for your interest in contributing to the Ence Pence Huta web
 6. [Testing](#testing)
 7. [Further Help](#further-help)
 
-## Getting Started 🚀
+## 🚀 Getting Started
+
+To contribute, follow these steps:
 
 - Make sure you have a [GitHub account](https://github.com/).
-- [Fork the repository](https://github.com/M-Kolacz/ence-pence-huta-next/fork) on GitHub.
-- [Clone your fork to your local machine](./README.md#installation-steps).
+- [Fork the repository](https://github.com/M-Kolacz/ence-pence-huta-next/fork) to create your copy of the project.
+- Clone your fork locally.
 
 ## Reporting Bugs 🐞
 
-- Ensure the bug hasn't already been reported by [searching the Issues](https://github.com/M-Kolacz/ence-pence-huta-next/labels/bug).
-- If the bug hasn't been reported, [open a new Issue](https://github.com/M-Kolacz/ence-pence-huta-next/issues/new/choose). Be sure to provide a clear title, a detailed description, and steps to reproduce the issue.
+- Check if the bug has already been reported by [searching the Issues](https://github.com/M-Kolacz/ence-pence-huta-next/labels/bug).
+- If the bug hasn’t been reported, [open a new Issue](https://github.com/M-Kolacz/ence-pence-huta-next/issues/new/choose) and include:
+  - **A clear and descriptive title.**
+  - **A detailed description of the issue.**
+  - **Steps to reproduce the bug (if applicable).**
 
 ## Feature Requests 🙋‍♂️
 
-- Check if the [feature has already been requested](https://github.com/M-Kolacz/ence-pence-huta-next/labels/enhancement).
-- If it hasn't, [open a new Issue](https://github.com/M-Kolacz/ence-pence-huta-next/issues/new/choose) with a clear title and detailed description of the feature you'd like to see.
+- Check if the [feature request already exists](https://github.com/M-Kolacz/ence-pence-huta-next/labels/enhancement).
+- If not, [open a new Issue](https://github.com/M-Kolacz/ence-pence-huta-next/issues/new/choose) and provide:
+  - **A concise title.**
+  - **A clear description of the proposed feature.**
+  - **Why this feature would be beneficial.**
 
 ## Pull Request Process 🖇️
 
@@ -39,14 +49,18 @@ Hello and thank you for your interest in contributing to the Ence Pence Huta web
 
 ## Code Style and Linting 🔬
 
-- Project use [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) for code styling and linting. Make sure your code adheres to project configurations.
-- Run the linter before submitting a PR to ensure your code passes.
+- We use [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) to maintain consistent code style.
 
 ## Testing 🔬
 
-- Add tests for any new features or fixes.
-- Ensure all tests pass before submitting a PR.
+- Add tests: Include tests for any new features or fixes.
+- Make sure existing and new tests pass before opening a pull request:
+  ```sh
+  $ npm run test
+  ```
 
 ## Further Help 💬
 
-If you have any questions or need further assistance, please reach out to (Michał Kołacz)[https://github.com/M-Kolacz].
+If you need any help or have questions, feel free to reach out through GitHub Issues or contact [Michał Kołacz](https://github.com/M-Kolacz/M-Kolacz).
+
+Thank you again for contributing!
