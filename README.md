@@ -54,15 +54,15 @@ Fire up your terminal and run the following commands:
 
 ```sh
 # Clone the repository
-$ git clone https://github.com/M-Kolacz/ence-pence-huta-next.git
+ git clone https://github.com/M-Kolacz/ence-pence-huta-next.git
 # Navigate into the project directory:
-$ cd ence-pence-huta-next
+ cd ence-pence-huta-next
 # Switch to the correct Node version: (If using NVM)
-$ nvm use
+ nvm use
 # Install project dependencies:
-$ npm install
+ npm install
 # Start the development server:
-$ npm run dev
+ npm run dev
 ```
 
 Open the app in your browser: http://localhost:3000/.
