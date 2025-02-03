@@ -12,7 +12,9 @@
   <a href="./contributing.md">
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg?style=flat-square" alt="Contributions Welcome" />
   </a>
-  <img src="https://api.netlify.com/api/v1/badges/0bfd1dbb-95f4-4e10-87e9-8fe83e642604/deploy-status" alt="Netlify Status" />
+ <a href="https://app.netlify.com/sites/ence-pence-huta-next/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/0bfd1dbb-95f4-4e10-87e9-8fe83e642604/deploy-status" alt="Netlify Status">
+  </a>
 </p>
 
 # Ence Pence 👶
