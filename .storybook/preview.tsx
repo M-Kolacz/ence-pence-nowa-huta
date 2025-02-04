@@ -18,7 +18,11 @@ const preview: Preview = {
       </div>
     ),
   ],
-
+  globals: {
+    a11y: {
+      manual: true,
+    },
+  },
   parameters: {
     controls: {
       expanded: true,
