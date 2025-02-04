@@ -37,6 +37,6 @@ jobs:
         run: npm run build:storybook
 
       - name: Publish Storybook 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@15de0f09300eea763baee31dff6c6184995c5f6a
         with:
           folder: storybook-static
