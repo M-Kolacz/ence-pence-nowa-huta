@@ -31,12 +31,12 @@ jobs:
           node-version-file: .nvmrc
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: bahmutov/npm-install@ec9e87262db2a1be2ca3ceb2d506c413a220542c
 
       - name: 🏗️ Build Storybook
         run: npm run build:storybook
 
       - name: Publish Storybook 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@15de0f09300eea763baee31dff6c6184995c5f6a
         with:
           folder: storybook-static
