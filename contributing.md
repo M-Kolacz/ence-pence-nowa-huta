@@ -1,4 +1,4 @@
-# Contributing to Ence Pence Huta Web App 🤝
+# Contributing to Ence Pence Nowa Huta Web App 🤝
 
 Thank you for your interest in contributing to the **Ence Pence Huta** web app! Whether it’s fixing bugs, adding new features, or improving documentation, your help is appreciated and highly valued.
 
@@ -19,21 +19,21 @@ This document will guide you through the contribution process.
 To contribute, follow these steps:
 
 - Make sure you have a [GitHub account](https://github.com/).
-- [Fork the repository](https://github.com/M-Kolacz/ence-pence-huta-next/fork) to create your copy of the project.
+- [Fork the repository](https://github.com/M-Kolacz/ence-pence-nowa-huta/fork) to create your copy of the project.
 - Clone your fork locally.
 
 ## Reporting Bugs 🐞
 
-- Check if the bug has already been reported by [searching the Issues](https://github.com/M-Kolacz/ence-pence-huta-next/labels/bug).
-- If the bug hasn’t been reported, [open a new Issue](https://github.com/M-Kolacz/ence-pence-huta-next/issues/new/choose) and include:
+- Check if the bug has already been reported by [searching the Issues](https://github.com/M-Kolacz/ence-pence-nowa-huta/labels/bug).
+- If the bug hasn’t been reported, [open a new Issue](https://github.com/M-Kolacz/ence-pence-nowa-huta/issues/new/choose) and include:
   - **A clear and descriptive title.**
   - **A detailed description of the issue.**
   - **Steps to reproduce the bug (if applicable).**
 
 ## Feature Requests 🙋‍♂️
 
-- Check if the [feature request already exists](https://github.com/M-Kolacz/ence-pence-huta-next/labels/enhancement).
-- If not, [open a new Issue](https://github.com/M-Kolacz/ence-pence-huta-next/issues/new/choose) and provide:
+- Check if the [feature request already exists](https://github.com/M-Kolacz/ence-pence-nowa-huta/labels/enhancement).
+- If not, [open a new Issue](https://github.com/M-Kolacz/ence-pence-nowa-huta/issues/new/choose) and provide:
   - **A concise title.**
   - **A clear description of the proposed feature.**
   - **Why this feature would be beneficial.**
