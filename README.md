@@ -12,17 +12,17 @@
   <a href="./contributing.md">
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg?style=flat-square" alt="Contributions Welcome" />
   </a>
- <a href="https://app.netlify.com/sites/ence-pence-huta-next/deploys">
+ <a href="https://app.netlify.com/sites/ence-pence-nowa-huta/deploys">
     <img src="https://api.netlify.com/api/v1/badges/0bfd1dbb-95f4-4e10-87e9-8fe83e642604/deploy-status" alt="Netlify Status">
   </a>
 </p>
 
-# Ence Pence 👶
+# Ence Pence Nowa Huta 👶
 
 Ence Pence Huta is a modern, performant web application designed as a promotional website for a nursery. The website offers parents a comprehensive view of the nursery's facilities, programs, and values, helping them make informed decisions when choosing the right environment for their children.
 
-- 🌐 [**Live Site**](https://ence-pence-huta-next.netlify.app/)
-- 📚 [**Storybook**](https://m-kolacz.github.io/ence-pence-huta-next/)
+- 🌐 [**Live Site**](https://ence-pence-nowa-huta.netlify.app/)
+- 📚 [**Storybook**](https://m-kolacz.github.io/ence-pence-nowa-huta/)
 - 🎨 [**Figma Design**](https://www.figma.com/design/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta?node-id=3-3&t=wd9jzcLxvfWzEG6E-1)
 
 ## Tech Stack 💻
@@ -54,9 +54,9 @@ Fire up your terminal and run the following commands:
 
 ```sh
 # Clone the repository
- git clone https://github.com/M-Kolacz/ence-pence-huta-next.git
+ git clone https://github.com/M-Kolacz/ence-pence-nowa-huta.git
 # Navigate into the project directory:
- cd ence-pence-huta-next
+ cd ence-pence-nowa-huta
 # Switch to the correct Node version: (If using NVM)
  nvm use
 # Install project dependencies:
