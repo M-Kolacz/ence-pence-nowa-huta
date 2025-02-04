@@ -14,7 +14,7 @@ This document will guide you through the contribution process.
 6. [Testing](#testing)
 7. [Further Help](#further-help)
 
-## 🚀 Getting Started
+## Getting Started 🚀
 
 To contribute, follow these steps:
 
@@ -56,7 +56,7 @@ To contribute, follow these steps:
 - Add tests: Include tests for any new features or fixes.
 - Make sure existing and new tests pass before opening a pull request:
   ```sh
-  $ npm run test
+   npm run test
   ```
 
 ## Further Help 💬
