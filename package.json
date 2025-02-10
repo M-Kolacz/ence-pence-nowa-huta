@@ -61,7 +61,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "axe-playwright": "^2.0.3",
+    "axe-playwright": "^2.1.0",
     "concurrently": "^9.1.2",
     "dotenv": "^16.4.7",
     "eslint": "^9",
