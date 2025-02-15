@@ -67,20 +67,20 @@ Fire up your terminal and run the following commands:
 
 Open the app in your browser: http://localhost:3000/.
 
-## Development using Dev Container (Optional) 🐳
+## Development using Docker 🐳
 
 For an easier setup experience, you can use Docker, which provides a pre-configured environment with all dependencies installed.
 
 ### Prerequisites 📋
 
-Ensure you have the following tools installed before using the Dev Container setup:
+Ensure you have the following tools installed before using the Docker setup:
 
 - [Docker](https://www.docker.com/products/docker-desktop)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### Setup Steps 🔧
 
-Follow these steps to start developing inside a Dev Container:
+Follow these steps to start developing inside a Docker setup:
 
 ```sh
 # Clone the repository
