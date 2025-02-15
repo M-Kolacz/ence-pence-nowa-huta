@@ -28,7 +28,7 @@
     "embla-carousel": "^8.5.2",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
-    "framer-motion": "^11.15.0",
+    "framer-motion": "^12.4.2",
     "jiti": "^1.21.7",
     "next": "15.1.6",
     "react": "^19.0.0",
