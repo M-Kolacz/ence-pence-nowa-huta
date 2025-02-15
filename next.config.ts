@@ -7,7 +7,7 @@ const jiti = createJiti(fileURLToPath(import.meta.url));
 const { env } = jiti("./src/utils/env.ts");
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "standalone",
 };
 
 export default withSentryConfig(nextConfig, {
