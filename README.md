@@ -67,6 +67,30 @@ Fire up your terminal and run the following commands:
 
 Open the app in your browser: http://localhost:3000/.
 
+## Development using Docker 🐳
+
+For an easier setup experience, you can use Docker, which provides a pre-configured environment with all dependencies installed.
+
+### Prerequisites 📋
+
+Ensure you have the following tools installed before using the Docker setup:
+
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+### Setup Steps 🔧
+
+Follow these steps to start developing inside a Docker setup:
+
+```sh
+# Clone the repository
+git clone https://github.com/M-Kolacz/ence-pence-nowa-huta.git
+# Navigate into the project directory
+cd ence-pence-nowa-huta
+# Start the server using Docker Compose
+docker-compose up
+```
+
 ## Contributing 🤝
 
 I welcome and appreciate all contributions! Whether it’s a small bug fix, new feature, or improvement suggestion, your help is valuable. Please read [Contributing Guidelines](./contributing.md) to get started.
