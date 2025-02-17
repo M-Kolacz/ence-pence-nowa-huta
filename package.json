@@ -35,7 +35,7 @@
     "react-dom": "^19.0.0",
     "react-photo-album": "^3.0.2",
     "sonner": "^1.7.4",
-    "tailwind-merge": "^2.5.5",
+    "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-radix": "^4.0.1",
     "vaul": "^1.1.2",
