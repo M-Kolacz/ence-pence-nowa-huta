@@ -47,7 +47,7 @@
     "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.50.1",
     "@storybook/addon-a11y": "^8.5.3",
-    "@storybook/addon-designs": "^8.1.0",
+    "@storybook/addon-designs": "^8.2.0",
     "@storybook/addon-essentials": "^8.5.3",
     "@storybook/addon-interactions": "^8.5.3",
     "@storybook/addon-links": "^8.5.3",
