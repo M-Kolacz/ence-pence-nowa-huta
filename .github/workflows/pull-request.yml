@@ -30,7 +30,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@ec9e87262db2a1be2ca3ceb2d506c413a220542c
+        uses: bahmutov/npm-install@7481d8fd7815dc5abfda5f1ec48aa2770e64c318
 
       - name: 🏗️ Build project (linting + typecheck)
         run: npm run build
@@ -55,7 +55,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@ec9e87262db2a1be2ca3ceb2d506c413a220542c
+        uses: bahmutov/npm-install@7481d8fd7815dc5abfda5f1ec48aa2770e64c318
 
       - name: 📥 Install Playwright Browsers
         run: npm run test:e2e:install
@@ -81,7 +81,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@ec9e87262db2a1be2ca3ceb2d506c413a220542c
+        uses: bahmutov/npm-install@7481d8fd7815dc5abfda5f1ec48aa2770e64c318
 
       - name: 📥 Install Playwright Browsers
         run: npm run test:e2e:install
